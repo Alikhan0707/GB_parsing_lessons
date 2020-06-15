@@ -56,18 +56,18 @@ while True:
 
                 if 'от' in salary:
 
-                    salary_min = salary[1]
+                    salary_min = int(salary[1])
                     salary_max = None
 
                 elif 'до' in salary:
 
-                    salary_max = salary[1]
+                    salary_max = int(salary[1])
                     salary_min = None
 
                 else:
 
-                    salary_min = salary[0]
-                    salary_max = salary[1]
+                    salary_min = int(salary[0])
+                    salary_max = int(salary[1])
             else:
 
                 salary_max = None
@@ -89,4 +89,4 @@ while True:
     else:
         break
 
-print(vacancies, '\n', len(vacancies))
+
