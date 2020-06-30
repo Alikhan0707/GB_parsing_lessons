@@ -18,8 +18,8 @@ class InstagramSpider(scrapy.Spider):
         self.start_urls = ['https://instagram.com/']
         self.parse_users = parse_users
 
-    username = 'alirakh7'
-    password = '#PWD_INSTAGRAM_BROWSER:10:1593287932:AYBQAFrHAQK0pVkQuNuPU62U6ylQI1BJkdsEHLeMDwH11txCjtzwAabqCTmDZgS7rnVbRXG1nGEEP46Jc7i6uZ4rMxyypGHCMj10XT+R9hnijBIy8k9OwiUTSbI/Y2Rn71UUZXYjrT+GcpWSGpmZOVVKlPEhyV1A'
+    username = ''
+    password = ''
     auth_url = 'https://www.instagram.com/accounts/login/ajax/'
 
     graphql_link = 'https://www.instagram.com/graphql/query/?'
@@ -116,7 +116,6 @@ class InstagramSpider(scrapy.Spider):
                 loader.add_value('follow_username', username)
             elif 'edge_follow' in user_data:
                 loader.add_value('follower_username', username)
-
 
             yield loader.load_item()
 
